@@ -3,7 +3,7 @@
     "@types/node": "^18.15.11",
     "esbuild": "^0.17.16"
   },
-  "name": "utilstypescript",
+  "name": "ts-espruino",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
