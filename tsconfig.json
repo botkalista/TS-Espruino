@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "ES5",
+        "outDir": "dist",
+        "types": [
+            "./src/types/esp.d.ts"
+        ],
+        "lib": [
+            "ES2015",
+            "DOM"
+        ],
+    },
+    "include": [
+        "src/index.ts",
+        "src/types/*.ts",
+        "@types/node"
+    ],
+    "exclude": [
+        "node_modules",
+        "tests"
+    ]
+}
