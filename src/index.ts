@@ -1,5 +1,3 @@
-import "./types/esp.d.ts";
-
 const wifi = require("Wifi");
 const http = require('http');
 
@@ -8,8 +6,8 @@ p.set();
 p.write(0);
 
 
-const SSID: string = 'WifiName';
-const PASS: string = 'passwordofthewifinetwork';
+const SSID: string = 'DigosFurgone';
+const PASS: string = 'cameriera';
 
 const SERVER_PORT: number = 8080;
 const HOSTNAME: string = 'esp8266';
