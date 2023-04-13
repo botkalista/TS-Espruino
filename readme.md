@@ -1,10 +1,10 @@
 
 
-Write your code in `src/index.ts`
+Write your code with the entry `src/index.ts`
 
-Compile it with `npm run compile`
+Build it with `npm run build`
 
-Copy the code inside `dist/index.js` or `dist/index.min.js` to your espruino ide
+Copy the code inside `out/bundle.js` to your espruino ide
 
 Enjoy :D
 
