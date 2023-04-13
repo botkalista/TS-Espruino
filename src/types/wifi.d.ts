@@ -14,25 +14,37 @@ type StatusInfo = {
     savedMode: 'off' | 'sta' | 'ap' | 'sta+ap'
 }
 
+type WifiAP = {
+    ssid: string;
+    mac: MACFormat;
+    authMode: 'open' | 'wep' | 'wpa' | 'wpa2' | 'wpa_wpa2';
+    channel: number;
+    hidden: boolean;
+    rssi: number;
+}
+
 declare class Wifi {
 
-    startAP(ssid: string, options: WifiApOptions, cb: ErrCb): never;
-    stopAP(cb: EmptyCallback): never;
+    startAP(ssid: string, options: WifiApOptions, cb: ErrCb): void;
+    stopAP(cb: EmptyCallback): void;
 
-    setAPIP(settings: SetAPSettings, cb: ErrCb): never;
-    setHostname(hostname: string, cb: ErrCb): never;
+    setAPIP(settings: SetAPSettings, cb: ErrCb): void;
+    setHostname(hostname: string, cb: ErrCb): void;
 
-    setIP(settings: SetAPSettings, cb: ErrCb): never;
-    getIP(cb: (err: any, ipinfo: SetAPSettings) => any): never;
+    setIP(settings: SetAPSettings, cb: ErrCb): void;
+    getIP(cb: (err: any, ipinfo: SetAPSettings) => any): void;
 
-    getHostname(cb: Cb<string>): never;
-    getStatus(cb: (info: StatusInfo) => any): never;
+    getHostname(cb: Cb<string>): void;
+    getStatus(cb: (info: StatusInfo) => any): void;
 
-    connect(ssid: string, options: WifiConnectOptions, cb: ErrCb): never;
+    connect(ssid: string, options: WifiConnectOptions, cb: ErrCb): void;
+    disconnect(cb?: EmptyCallback): void;
+
+    scan(cb: Cb<WifiAP[]>): void;
 
     on(event: 'associated', cb: Cb<{ ssid: string, mac: MACFormat, channel: number }>): never;
-    on(event: 'connected', cb: Cb<SetAPSettings>): never;
-    on(event: 'sta_joined', cb: Cb<{ mac: MACFormat }>): never;
-    on(event: 'dhcp_timeout', cb: EmptyCallback): never;
+    on(event: 'connected', cb: Cb<SetAPSettings>): void;
+    on(event: 'sta_joined', cb: Cb<{ mac: MACFormat }>): void;
+    on(event: 'dhcp_timeout', cb: EmptyCallback): void;
 
 }

@@ -6,7 +6,8 @@
         "types": [
             "./src/types/esp.d.ts",
             "./src/types/wifi.d.ts",
-            "./src/types/http.d.ts"
+            "./src/types/http.d.ts",
+            "./src/types/HD44780.d.ts",
         ],
         "lib": [
             "ES2015",
@@ -14,7 +15,7 @@
         ],
     },
     "include": [
-        "./src/index.ts",
+        "src/*.ts", "src/components/State.ts", "src/components/State.ts",
     ],
     "exclude": [
         "node_modules",
