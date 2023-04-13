@@ -1,3 +1,5 @@
+import "./types/esp.d.ts";
+
 const wifi = require("Wifi");
 const http = require('http');
 

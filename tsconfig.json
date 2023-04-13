@@ -4,7 +4,9 @@
         "target": "ES5",
         "outDir": "dist",
         "types": [
-            "./src/types/esp.d.ts"
+            "./src/types/esp.d.ts",
+            "./src/types/wifi.d.ts",
+            "./src/types/http.d.ts"
         ],
         "lib": [
             "ES2015",
@@ -12,9 +14,7 @@
         ],
     },
     "include": [
-        "src/index.ts",
-        "src/types/*.ts",
-        "@types/node"
+        "./src/index.ts",
     ],
     "exclude": [
         "node_modules",
